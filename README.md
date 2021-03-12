@@ -1,71 +1,195 @@
 # Getting Started Auth with Google Account
-Live Demo > https://raultocantins.github.io/AuthgoogleAccount/
+Live Demo > [AuthgoogleAccount](https://raultocantins.github.io/AuthgoogleAccount/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting client ID Google
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Access [Google Console](console.developers.google.com) and signin with google.
 
-### `npm test`
+2. Click in My first Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/1.png)
 
-### `npm run build`
+3. In new Tab click in New Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/2.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Choose a name for project and click in Create or Ok.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/3.png)
 
-### `npm run eject`
+5. After created the project click in left tab credentials
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+6. And click in configure consent screen
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/4.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+7.Select the option External and click in create.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/5.png)
 
-## Learn More
+8. Choose name of the App and email suport and contact details of the developer.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/6.png)
+ 
+9. Scroll Down.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/6-2.png)
 
-### Code Splitting
+10. Next part click in save and continue.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/7.png)
 
-### Analyzing the Bundle Size
+11. Next part click in save and continue.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/8.png)
 
-### Making a Progressive Web App
+12.To finale settings click in return to the panel.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/9.png)
 
-### Advanced Configuration
+13. Click in left tab credentials after create credentials and select ID client OAuth.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/10.png)
 
-### Deployment
+14.Choose App type "Aplication web" and name "some name".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/11.png)
 
-### `npm run build` fails to minify
+15.Add connection Uris as example "http://localhost:3000" or "http://127.0.0.1:3000" and click in create.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/12.png)
+
+16.Will appear new tab with your credentials, you will copy the client ID.
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/finish.png)
+
+
+
+# Create React-App
+
+### I hope that you have installed npm and npx on your machine. 
+
+1. Open the windows terminal and create new project react with "npx create-react-app mynameapp".
+ 
+3. Install dependencies with command "npm i react-google-login" and keypress Enter.
+
+4. Install dependencies with command "npm i react-google-one-tap-login" and keypress Enter.
+
+5. Access the folder with command "cd mynameapp" and inside folder type "code . " and keypress Enter.
+
+
+6. Create new folder inside src with the name "components" and inside create react component "AuthgoogleAccount.js".
+
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/react1.png)
+
+7.Import "useGoogleLogin" and "useGoogleOneTapLogin" and create a function "LoginHooks".
+
+8.Copy code below to inside AuthgoogleAccount component.
+
+
+
+```
+import React, { useState } from "react";
+import { useGoogleLogin } from "react-google-login";
+import { useGoogleOneTapLogin } from "react-google-one-tap-login";
+import GoogleSvg from "../assets/google.svg";
+import './AuthGoogleAccountsHooks.css'
+// refresh token
+//import { refreshTokenSetup } from '../utils/refreshToken';
+
+const clientId =
+  "240775385130-t0aq4oa51oigpkat8vianrrm6595qd1t.apps.googleusercontent.com";
+
+function LoginHooks() {
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userImg, setUserImg] = useState("");
+
+  useGoogleOneTapLogin({
+    onError: (error) => console.log(error),
+    onSuccess: (response) => {
+      setUserName(response.given_name);
+      setUserEmail(response.email);
+      setUserImg(response.picture);
+    },
+    googleAccountConfigs: {
+      client_id:
+        "240775385130-t0aq4oa51oigpkat8vianrrm6595qd1t.apps.googleusercontent.com",
+    },
+  });
+
+  const onSuccess = (res) => {
+    setUserName(res.profileObj.givenName);
+    setUserEmail(res.profileObj.email);
+    setUserImg(res.profileObj.imageUrl);
+
+    // refreshTokenSetup(res);
+  };
+
+  const onFailure = (res) => {
+  
+    alert(`Failed to login. ${res.details}`);
+  };
+
+  const { signIn } = useGoogleLogin({
+    onSuccess,
+    onFailure,
+    clientId,
+    isSignedIn: true,
+    accessType: "offline",
+    // responseType: 'code',
+    // prompt: 'consent',
+  });
+
+  return (
+    <div>
+      <button onClick={signIn} className="button">
+        <img src={GoogleSvg} alt="google login" className="icon"></img>
+        <span className="buttonText">Sign in with Google</span>
+      </button>
+      {userEmail ? (
+        <div className="boxProfile">
+          <h4>Your Name is: {userName}</h4>
+          <h4>Your Email is: {userEmail}</h4>
+          <img src={userImg} alt="imgProfile" className="imgProfile" />
+        </div>
+      ) : (
+        ""
+      )}
+    </div>
+  );
+}
+
+export default LoginHooks;
+```
+
+9.Replace value of const clientId for your Client ID.
+
+10.Download google.svg to signin button in [Google svg](https://raultocantins.github.io/AuthgoogleAccount/static/media/google.9aefd664.svg) and create new folder inside src as assets and copy here.
+
+11.Import google.svg to inside AuthgoogleAccount.js
+
+10.Go to App.js and import AuthgoogleAccount component as Login and replace tag <header> for him.
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/react4.png)
+
+11.Now It's running app with npm start and be testing in web browser in "localhost:3000".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
