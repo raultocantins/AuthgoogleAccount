@@ -1,26 +1,43 @@
-import React from 'react';
-import { useGoogleLogin } from 'react-google-login';
-
+import React, { useState } from "react";
+import { useGoogleLogin } from "react-google-login";
+import { useGoogleOneTapLogin } from "react-google-one-tap-login";
+import GoogleSvg from "../assets/google.svg";
+import './AuthGoogleAccountsHooks.css'
 // refresh token
 //import { refreshTokenSetup } from '../utils/refreshToken';
 
 const clientId =
-  '240775385130-t0aq4oa51oigpkat8vianrrm6595qd1t.apps.googleusercontent.com';
+  "240775385130-t0aq4oa51oigpkat8vianrrm6595qd1t.apps.googleusercontent.com";
 
 function LoginHooks() {
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userImg, setUserImg] = useState("");
+
+  useGoogleOneTapLogin({
+    onError: (error) => console.log(error),
+    onSuccess: (response) => {
+      setUserName(response.given_name);
+      setUserEmail(response.email);
+      setUserImg(response.picture);
+    },
+    googleAccountConfigs: {
+      client_id:
+        "240775385130-t0aq4oa51oigpkat8vianrrm6595qd1t.apps.googleusercontent.com",
+    },
+  });
+
   const onSuccess = (res) => {
-    console.log('Login Success: currentUser:', res.profileObj);
-    alert(
-      `Logged in successfully welcome ${res.profileObj.name} 😍. \n See console for full profile object.`
-    );
-   // refreshTokenSetup(res);
+    setUserName(res.profileObj.givenName);
+    setUserEmail(res.profileObj.email);
+    setUserImg(res.profileObj.imageUrl);
+
+    // refreshTokenSetup(res);
   };
 
   const onFailure = (res) => {
-    console.log('Login failed: res:', res);
-    alert(
-      `Failed to login. 😢 Please ping this to repo owner twitter.com/sivanesh_fiz`
-    );
+  
+    alert(`Failed to login. ${res.details}`);
   };
 
   const { signIn } = useGoogleLogin({
@@ -28,17 +45,27 @@ function LoginHooks() {
     onFailure,
     clientId,
     isSignedIn: true,
-    accessType: 'offline',
+    accessType: "offline",
     // responseType: 'code',
     // prompt: 'consent',
   });
 
   return (
-    <button onClick={signIn} className="button">
-      <img src="icons/google.svg" alt="google login" className="icon"></img>
-
-      <span className="buttonText">Sign in with Google</span>
-    </button>
+    <div>
+      <button onClick={signIn} className="button">
+        <img src={GoogleSvg} alt="google login" className="icon"></img>
+        <span className="buttonText">Sign in with Google</span>
+      </button>
+      {userEmail ? (
+        <div className="boxProfile">
+          <h4>Your Name is: {userName}</h4>
+          <h4>Your Email is: {userEmail}</h4>
+          <img src={userImg} alt="imgProfile" className="imgProfile" />
+        </div>
+      ) : (
+        ""
+      )}
+    </div>
   );
 }
 
