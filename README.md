@@ -23,7 +23,7 @@ Live Demo > [AuthgoogleAccount](https://raultocantins.github.io/AuthgoogleAccoun
 
 5. After created the project click in left tab credentials
 
-6. And click in Configurar tela de consentimento
+6. And click in configure consent screen
 
 ![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/4.png)
 
