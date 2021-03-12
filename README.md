@@ -69,6 +69,16 @@ Live Demo > [AuthgoogleAccount](https://raultocantins.github.io/AuthgoogleAccoun
 
 
 
+# Create React-App
+
+### I hope that you have installed npm and npx on your machine. 
+
+1. Open the windows terminal and create new project react with "npx create-react-app mynameapp".
+2. Install dependencies with command "npm i react-google-login" and keypress Enter.
+3. Install dependencies with command "npm i react-google-one-tap-login" and keypress Enter.
+4. Access the folder with command "cd mynameapp" and inside folder type "code . " and keypress Enter.
+5. 
+
 
 
 
