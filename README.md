@@ -5,7 +5,7 @@ Live Demo > [AuthgoogleAccount](https://raultocantins.github.io/AuthgoogleAccoun
 
 
 
-## Getting Key Google
+## Getting client ID Google
 
 1. Access [Google Console](console.developers.google.com) and signin with google.
 
@@ -20,6 +20,55 @@ Live Demo > [AuthgoogleAccount](https://raultocantins.github.io/AuthgoogleAccoun
 4. Choose a name for project and click in Create or Ok.
 
 ![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/3.png)
+
+5. After created the project click in left tab credentials
+
+6. And click in Configurar tela de consentimento
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/4.png)
+
+7.Select the option External and click in create.
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/5.png)
+
+8. Choose name of the App and email suport and contact details of the developer.
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/6.png)
+ 
+9. Click in save and continue.
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/6-2.png)
+
+10. Next part click in save and continue.
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/7.png)
+
+11. Next part click in save and continue.
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/8.png)
+
+12.To finale settings click in return to the panel.
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/9.png)
+
+13. Click in left tab credentials after create credentials and select ID client OAuth.
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/10.png)
+
+14.Choose App type "Aplication web" and name "some name".
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/11.png)
+
+15.Add connection Uris as example "http://localhost:3000" or "http://127.0.0.1:3000" and click in create.
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/12.png)
+
+16.Will appear new tab with your credentials, you will copy the client ID.
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/finish.png)
+
+
+
 
 
 
