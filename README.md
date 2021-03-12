@@ -35,7 +35,7 @@ Live Demo > [AuthgoogleAccount](https://raultocantins.github.io/AuthgoogleAccoun
 
 ![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/6.png)
  
-9. Click in save and continue.
+9. Scroll Down.
 
 ![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/6-2.png)
 
