@@ -1,6 +1,6 @@
 # Getting Started Auth with Google Account
 Live Demo > https://raultocantins.github.io/AuthgoogleAccount/
-![alt text](https://raultocantins.github.io/AuthgoogleAccount/src/assets/google.svg")
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/1.png)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
