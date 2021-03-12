@@ -89,6 +89,10 @@ Live Demo > [AuthgoogleAccount](https://raultocantins.github.io/AuthgoogleAccoun
 
 7.Import "useGoogleLogin" and "useGoogleOneTapLogin" and create a function "LoginHooks".
 
+8.Copy code below to inside AuthgoogleAccount component.
+
+
+
 ```
 import React, { useState } from "react";
 import { useGoogleLogin } from "react-google-login";
@@ -163,6 +167,16 @@ function LoginHooks() {
 
 export default LoginHooks;
 ```
+
+9.Replace value of const clientId for your Client ID.
+
+10.Go to App.js and import AuthgoogleAccount component as Login and replace tag <header> for him.
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/react4.png)
+
+11.Now It's running app with npm start and be testing in web browser "localhost:3000".
+
+
 
 
 
