@@ -74,10 +74,103 @@ Live Demo > [AuthgoogleAccount](https://raultocantins.github.io/AuthgoogleAccoun
 ### I hope that you have installed npm and npx on your machine. 
 
 1. Open the windows terminal and create new project react with "npx create-react-app mynameapp".
-2. Install dependencies with command "npm i react-google-login" and keypress Enter.
-3. Install dependencies with command "npm i react-google-one-tap-login" and keypress Enter.
-4. Access the folder with command "cd mynameapp" and inside folder type "code . " and keypress Enter.
-5. 
+ 
+3. Install dependencies with command "npm i react-google-login" and keypress Enter.
+
+4. Install dependencies with command "npm i react-google-one-tap-login" and keypress Enter.
+
+5. Access the folder with command "cd mynameapp" and inside folder type "code . " and keypress Enter.
+
+
+6. Create new folder inside src with the name "components" and inside create react component "AuthgoogleAccount.js".
+
+
+![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/react1.png)
+
+7.Import "useGoogleLogin" and "useGoogleOneTapLogin" and create a function "LoginHooks".
+
+```
+import React, { useState } from "react";
+import { useGoogleLogin } from "react-google-login";
+import { useGoogleOneTapLogin } from "react-google-one-tap-login";
+import GoogleSvg from "../assets/google.svg";
+import './AuthGoogleAccountsHooks.css'
+// refresh token
+//import { refreshTokenSetup } from '../utils/refreshToken';
+
+const clientId =
+  "240775385130-t0aq4oa51oigpkat8vianrrm6595qd1t.apps.googleusercontent.com";
+
+function LoginHooks() {
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userImg, setUserImg] = useState("");
+
+  useGoogleOneTapLogin({
+    onError: (error) => console.log(error),
+    onSuccess: (response) => {
+      setUserName(response.given_name);
+      setUserEmail(response.email);
+      setUserImg(response.picture);
+    },
+    googleAccountConfigs: {
+      client_id:
+        "240775385130-t0aq4oa51oigpkat8vianrrm6595qd1t.apps.googleusercontent.com",
+    },
+  });
+
+  const onSuccess = (res) => {
+    setUserName(res.profileObj.givenName);
+    setUserEmail(res.profileObj.email);
+    setUserImg(res.profileObj.imageUrl);
+
+    // refreshTokenSetup(res);
+  };
+
+  const onFailure = (res) => {
+  
+    alert(`Failed to login. ${res.details}`);
+  };
+
+  const { signIn } = useGoogleLogin({
+    onSuccess,
+    onFailure,
+    clientId,
+    isSignedIn: true,
+    accessType: "offline",
+    // responseType: 'code',
+    // prompt: 'consent',
+  });
+
+  return (
+    <div>
+      <button onClick={signIn} className="button">
+        <img src={GoogleSvg} alt="google login" className="icon"></img>
+        <span className="buttonText">Sign in with Google</span>
+      </button>
+      {userEmail ? (
+        <div className="boxProfile">
+          <h4>Your Name is: {userName}</h4>
+          <h4>Your Email is: {userEmail}</h4>
+          <img src={userImg} alt="imgProfile" className="imgProfile" />
+        </div>
+      ) : (
+        ""
+      )}
+    </div>
+  );
+}
+
+export default LoginHooks;
+```
+
+
+
+
+
+
+
+
 
 
 
