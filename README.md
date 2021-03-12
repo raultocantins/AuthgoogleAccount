@@ -170,11 +170,15 @@ export default LoginHooks;
 
 9.Replace value of const clientId for your Client ID.
 
+10.Download google.svg to signin button in [Google svg](https://raultocantins.github.io/AuthgoogleAccount/static/media/google.9aefd664.svg) and create new folder inside src as assets and copy here.
+
+11.Import google.svg to inside AuthgoogleAccount.js
+
 10.Go to App.js and import AuthgoogleAccount component as Login and replace tag <header> for him.
 
 ![imgReadme](https://github.com/raultocantins/AuthgoogleAccount/blob/master/src/assets/react4.png)
 
-11.Now It's running app with npm start and be testing in web browser "localhost:3000".
+11.Now It's running app with npm start and be testing in web browser in "localhost:3000".
 
 
 
